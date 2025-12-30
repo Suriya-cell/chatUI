@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#121212;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:#fff;
+}
+
+/* MAIN CONTAINER */
+.chat-app{
+    width:900px;
+    height:520px;
+    background:#1e1e1e;
+    display:flex;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:280px;
+    background:#181818;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.user:hover{
+    background:#2a2a2a;
+}
+
+/* AVATAR */
+.avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#00e0ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.user span{
+    font-size:14px;
+    opacity:0.8;
+}
+
+/* CHAT AREA */
+.chat{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+.chat-header{
+    padding:16px;
+    background:#181818;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.chat-header .avatar{
+    width:36px;
+    height:36px;
+}
+
+/* MESSAGES */
+.messages{
+    flex:1;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    overflow-y:auto;
+}
+
+.msg{
+    max-width:60%;
+    padding:12px 16px;
+    border-radius:16px;
+    font-size:14px;
+}
+
+.received{
+    background:#2a2a2a;
+    align-self:flex-start;
+}
+
+.sent{
+    background:#00e0ff;
+    color:#000;
+    align-self:flex-end;
+}
+
+/* INPUT */
+.input-box{
+    display:flex;
+    padding:16px;
+    background:#181818;
+    gap:10px;
+}
+
+.input-box input{
+    flex:1;
+    padding:12px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+    background:#2a2a2a;
+    color:#fff;
+}
+
+.input-box button{
+    padding:12px 20px;
+    border-radius:20px;
+    border:none;
+    background:#00e0ff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .chat-app{
+        width:100%;
+        height:100vh;
+        border-radius:0;
+    }
+    .sidebar{
+        display:none;
+    }
+}
